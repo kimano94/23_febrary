@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post-card</title>
+    <style>
+        * {
+            /*Zero m & p*/
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /*Size*/
+            width: 100%;
+            height: auto;
+
+            /*style*/
+            background: url("newBackground.png") center/100% no-repeat;            
+        }
+
+        h1, h3, .postCard>div {
+            /*подложка под текст*/
+            background-color: rgba(255, 255, 255, 0.356);
+        }
+
+        .postCard {
+            /*workPlace*/
+            width: 100%;
+            height: 100vh;
+
+            /*vesrtka*/
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        pre {
+            /*style text*/
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .page1 {
+            width: 50%;
+            height: 50vh;
+
+            background: url("warior.png") center/100% no-repeat; 
+        }
+    </style>
+</head>
+<body>
+    <div class="postCard">
+        <h1>Поздравляем!</h1>
+        <h3>23 февраля</h3>
+        <div id="card">
+            <div class="page1"></div>
+            <div class="page2">
+                <pre>
+                    Дорогой Яков!
+                    Поздравляю тебя с Днем защитника Отечества! 
+                    Пусть мужество, честь и сила всегда будут твоими верными спутниками. 
+                    Желаю тебе крепкого здоровья, успехов во всех начинаниях и благополучия. 
+                    Пусть каждый день приносит радость и уверенность в завтрашнем дне. 
+                    Ты — наша гордость и опора!            
+                    С уважением, Антон!
+                </pre>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
