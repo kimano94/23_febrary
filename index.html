@@ -20,7 +20,37 @@
             background: url("newBackground.png") center/100% no-repeat;            
         }
 
-        h1, h3, .postCard>div {
+        @keyframes circle {
+            from {
+                background: linear-gradient(45deg, #ffba45, red, blue, green);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                color: green;
+                display: table;
+                margin: 20px auto;
+            }
+
+            to {
+                background: linear-gradient(45deg, green, blue, red, #ffba45);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                color: #ffba45;
+                display: table;
+                margin: 20px auto;
+            }
+        }
+
+        h1, h3 {
+            background: linear-gradient(45deg, green, blue, red, #ffba45);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #ffba45;
+            display: table;
+            margin: 20px auto;
+            animation: circle 3s ease-in-out 3s infinite;
+        }
+
+        .postCard>div {
             /*подложка под текст*/
             background-color: rgba(255, 255, 255, 0.356);
         }
@@ -37,16 +67,43 @@
             align-items: center;
         }
 
+        @keyframes chgBorder {
+            0% {
+                border-color: blueviolet;
+            }
+
+            25% {
+                border-color: #ffa200;
+            }
+
+            50% {
+                border-color: #cc2300;
+            }
+
+            75% {
+                border-color: #00eeaa;
+            }
+
+            100% {
+                border-color: blueviolet;
+            }
+        }
+
         #card {
+            width: 30%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
+            border: 5px solid blueviolet;
+            animation: chgBorder 3s ease 0s infinite;
         }
 
-        pre {
+        p {
+            width: inherit;
             /*style text*/
-            font-size: 28px;
+            font-size: 12px;
             font-weight: 700;
         }
 
@@ -65,7 +122,7 @@
         <div id="card">
             <div class="page1"></div>
             <div class="page2">
-                <pre>
+                <p>
                     Дорогой Яков!
                     Поздравляю тебя с Днем защитника Отечества! 
                     Пусть мужество, честь и сила всегда будут твоими верными спутниками. 
@@ -73,7 +130,7 @@
                     Пусть каждый день приносит радость и уверенность в завтрашнем дне. 
                     Ты — наша гордость и опора!            
                     С уважением, Антон!
-                </pre>
+                </p>
             </div>
         </div>
     </div>
